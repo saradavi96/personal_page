@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.viola {
+  background: radial-gradient(circle, #990070, #66004b);
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 25%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  margin-top: 75px;
+  box-shadow: 2px 2px 10px black;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+</style>
+
+<script src="jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<button id="bottone" type="submit" class="w3-button w3-light-grey w3-padding-large w3-section">
+  Start Animation
+</button>
+<div id="oggetto" class="viola"></div>
+
+<script>
+
+$(document).ready(function(){
+  $("button").click(function(){
+    var div = $("div");
+    div.animate({borderRadius: '0%', left: '75%', opacity: '1.0'}, "slow");
+    div.animate({borderRadius: '50%', top: '75%', opacity: '0.5'}, "slow");
+    div.animate({borderRadius: '0%', left: '25%', opacity: '1.0'}, "slow");
+    div.animate({borderRadius: '50%', top: '25%', opacity: '0.5'}, "slow");
+  });
+});
+
+</script>
+
+</body>
+
+</html>
